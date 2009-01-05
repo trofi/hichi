@@ -1,0 +1,2 @@
+ * convert Prelude.read exceptions to IChatError
+
