@@ -79,7 +79,9 @@ bot_react (IChatS2C _s_cmd m@(IChatMessage _tag _counter sender cmd)) =
                            with_receiver sender $
                                refresh line
            StatusRequest
-                -> status
+                -> when (my_sig /= sender) $
+                       with_receiver sender $
+                           status
 
            Create line _receiver
                 -> do when (my_sig /= sender) $

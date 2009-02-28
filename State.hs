@@ -1,6 +1,6 @@
 module State
     (
-      bot_main
+      bot_main -- :: (IChatS2C -> BotApp s ()) -> BotApp s ()
     , BotState(..)
     , BotApp
 
