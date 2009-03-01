@@ -17,11 +17,13 @@ build-type:          Simple
 
 tested-with:         GHC==6.10.1
 
---
---
---
+extra-source-files:  TODO
 
-extra-source-files:  Codec/Test.hs, TODO
+flag test
+    description: Enable testing (currently, codec sanity only)
+    default:     False
+
+--
 
 executable           hichi
     main-is:             Main.hs
@@ -49,3 +51,12 @@ executable           hichi
 
 --- RC4 testsuite
 -- main-is:             Codec/Test.hs
+
+executable test-rc4
+  hs-source-dirs:       ., Codec
+  main-is:              Test.hs
+  -- Only enable the build-depends here if configured with "-ftest".
+  if flag(test)
+      buildable:          True
+  else
+      buildable:          False
