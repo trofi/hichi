@@ -1,4 +1,4 @@
-module State
+module Hichi.State
     (
       bot_main -- :: (IChatS2C -> BotApp s ()) -> BotApp s ()
     , BotState(..)
@@ -49,8 +49,7 @@ import Control.Concurrent.MVar
 
 import Control.Monad.State
 
-import IChat
-import Error
+import Network.IChat
 
 data BotState s =
     BotState { bs_counter         :: Int

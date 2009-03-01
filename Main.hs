@@ -3,7 +3,7 @@ module Main (main) where
 import System.Environment (getArgs)
 import System.Exit (exitWith, ExitCode(..))
 
-import IChatMain
+import Hichi.IChatMain
 
 data Config =
     Config { my_nick :: String
@@ -26,5 +26,5 @@ parseArgs args =
     case args of
         []  -> return $ defaultConfig
         [x] -> return $ defaultConfig { my_nick = x }
-        _   -> do print "usage: hichat <bot-nick>"
+        _   -> do print "usage: hichi <bot-nick>"
                   exitWith (ExitFailure 1)

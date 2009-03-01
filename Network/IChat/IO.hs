@@ -1,4 +1,4 @@
-module IChat.IO
+module Network.IChat.IO
     (
       RawMsg(..)
     , readRM
@@ -6,7 +6,7 @@ module IChat.IO
     )
 where
 
-import IChat.Aux
+import Network.IChat.Aux
 
 import qualified Data.ByteString.Lazy.Char8 as C
 

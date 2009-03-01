@@ -1,4 +1,4 @@
-module IChat.Message
+module Network.IChat.Message
     (
       IChatMessage(..)
 
@@ -7,12 +7,12 @@ module IChat.Message
     )
 where
 
-import IChat.Command
-import IChat.Aux
+import Network.IChat.Command
+import Network.IChat.Aux
 
 import qualified Data.ByteString.Lazy.Char8 as C
 
-import Error
+import Network.IChat.Error
 
 data IChatMessage =
     -- IChatMessage_Junk C.ByteString -- raw data

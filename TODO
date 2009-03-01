@@ -1,2 +1,2 @@
  * convert Prelude.read exceptions to IChatError
-
+ * split up .cabal into some libs

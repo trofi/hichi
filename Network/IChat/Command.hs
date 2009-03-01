@@ -1,4 +1,4 @@
-module IChat.Command
+module Network.IChat.Command
     (
       IChatCommand(..)
 
@@ -10,7 +10,7 @@ module IChat.Command
     )
 where
 
-import IChat.Aux
+import Network.IChat.Aux
 
 import qualified Data.ByteString.Lazy.Char8 as C
 

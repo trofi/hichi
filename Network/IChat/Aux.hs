@@ -1,4 +1,4 @@
-module IChat.Aux
+module Network.IChat.Aux
     (
       show_bs
 

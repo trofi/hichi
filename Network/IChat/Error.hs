@@ -1,5 +1,5 @@
 {-# OPTIONS -fglasgow-exts #-}
-module Error
+module Network.IChat.Error
     (
       IChatError(..)
     , throwEx

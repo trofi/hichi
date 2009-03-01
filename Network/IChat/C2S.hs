@@ -1,13 +1,13 @@
-module IChat.C2S
+module Network.IChat.C2S
     (
       IChatC2S(..)
     , c2s_raw
     )
 where
 
-import IChat.IO
-import IChat.Aux
-import IChat.Message
+import Network.IChat.IO
+import Network.IChat.Aux
+import Network.IChat.Message
 
 import qualified Data.ByteString.Lazy.Char8 as C
 import qualified Codec.RC4 as RC4

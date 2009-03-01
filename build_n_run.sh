@@ -2,5 +2,6 @@
 
 cabal configure
 cabal build
+cabal sdist
 
-dist/build/hichat/hichat
+dist/build/hichi/hichi

@@ -1,20 +1,19 @@
-module IChat.S2C
+module Network.IChat.S2C
     (
       IChatS2C(..)
     , raw_s2c
     )
 where
 
-import IChat.IO
-import IChat.Aux
-import IChat.Message
+import Network.IChat.IO
+import Network.IChat.Aux
+import Network.IChat.Message
+import Network.IChat.Error
 
 import qualified Data.ByteString.Lazy as B
 import qualified Data.ByteString.Lazy.Char8 as C
 
 import qualified Codec.RC4 as RC4
-
-import Error
 
 passphrase :: B.ByteString
 passphrase = C.pack "tahci"

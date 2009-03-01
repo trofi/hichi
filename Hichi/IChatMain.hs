@@ -1,4 +1,4 @@
-module IChatMain
+module Hichi.IChatMain
     (
       main'
     , ServerAddr
@@ -13,9 +13,9 @@ import qualified Data.ByteString.Lazy.Char8 as C
 import Control.Concurrent.MVar
 import Control.Monad.State
 
-import State
+import Network.IChat
 
-import IChat
+import Hichi.State
 
 type ServerAddr = (String, Int)
 
