@@ -237,9 +237,9 @@ bot_main message_handler =
 --
 
 -- | handleEx wrapper for BotApp monad
+-- | Some dark magic here to keep state consistent.
 botHandleEx :: (IChatError -> BotApp s a) -> BotApp s a -> BotApp s a
-botHandleEx handler action = do -- | Some dark magic here to keep state consistent
-                                s <- get
+botHandleEx handler action = do s <- get
                                 (r, s') <- liftIO $ handleEx (\e -> runStateT (handler e) s) (runStateT action s)
                                 put s'
                                 return r
