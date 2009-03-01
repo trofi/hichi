@@ -49,9 +49,6 @@ executable           hichi
     ghc-options:         -funbox-strict-fields -Wall
     ghc-prof-options:    -prof -auto-all
 
---- RC4 testsuite
--- main-is:             Codec/Test.hs
-
 executable test-rc4
   hs-source-dirs:       ., Codec
   main-is:              Test.hs
