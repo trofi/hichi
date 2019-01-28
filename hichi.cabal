@@ -19,12 +19,6 @@ tested-with:         GHC==6.10.1
 
 extra-source-files:  TODO
 
-flag test
-    description: Enable testing (currently, codec sanity only)
-    default:     False
-
---
-
 executable           hichi
     main-is:             Main.hs
 
@@ -47,13 +41,10 @@ executable           hichi
                          Network.IChat.Message
 
     ghc-options:         -funbox-strict-fields -Wall
-    ghc-prof-options:    -prof -auto-all
+    ghc-prof-options:    -auto-all
 
-executable test-rc4
+test-suite test-rc4
+  type:                 exitcode-stdio-1.0
   hs-source-dirs:       ., Codec
   main-is:              Test.hs
-  -- Only enable the build-depends here if configured with "-ftest".
-  if flag(test)
-      buildable:          True
-  else
-      buildable:          False
+  other-modules:       Codec.RC4
